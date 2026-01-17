@@ -1,0 +1,63 @@
+{
+  "name": "@aryanjsx/api-response",
+  "version": "1.0.0",
+  "description": "A lightweight, dependency-free TypeScript library for standardizing REST API responses in Express applications",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "keywords": [
+    "api",
+    "response",
+    "express",
+    "rest",
+    "json",
+    "standardize",
+    "error-handling",
+    "middleware",
+    "typescript",
+    "type-safe"
+  ],
+  "author": "aryanjsx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aryanjsx/api-response"
+  },
+  "bugs": {
+    "url": "https://github.com/aryanjsx/api-response/issues"
+  },
+  "homepage": "https://github.com/aryanjsx/api-response#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.0.0"
+  }
+}
